@@ -32,25 +32,30 @@ const fullTitle = title === siteName ? title : `${title} — ${siteName}`;
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <div class="container">
-    <nav class="site-nav">
-      <a href="/" class="brand"><span class="brand-mark">◦</span>I Am That</a>
-      <ul>
-        <li><a href="/">Writings</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/rss.xml">Subscribe</a></li>
-      </ul>
-    </nav>
+  <header class="site-header">
+    <div class="container">
+      <nav class="site-nav">
+        <a href="/" class="brand"><span class="brand-mark">◦</span>Project-that</a>
+        <ul>
+          <li><a href="/">Writings</a></li>
+          <li><a href="/about">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
+  <main>
     <slot />
-  </div>
+  </main>
 
   <footer class="site-footer">
-    <div class="links">
-      <a href="/rss.xml">RSS</a>
-      <a href="/about">About</a>
+    <div class="container">
+      <div class="links">
+        <a href="/about">About</a>
+        <a href="/rss.xml">RSS</a>
+      </div>
+      <div class="copyright">Written in stillness. © {new Date().getFullYear()}.</div>
     </div>
-    <div class="copyright">Written in stillness. © {new Date().getFullYear()}.</div>
   </footer>
 </body>
 </html>
