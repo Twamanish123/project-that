@@ -1,0 +1,42 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const formatDate = (date) => {
+  const d = new Date(date);
+  return d.toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' });
+};
+---
+
+<BaseLayout title="I Am That" description="Notes on what was always already the case.">
+  <section class="hero">
+    <h1>Notes on what was <em>always already</em> the case.</h1>
+    <p>Slow writing on the ground of experience — drawing from the Ashtavakra Gita, Kashmir Shaivism, and direct inquiry. One post when something is worth saying.</p>
+  </section>
+
+  <section class="post-list">
+    <div class="post-list-heading">Recent Writings</div>
+
+    {posts.length === 0 && (
+      <p style="color: var(--ink-soft); font-style: italic; padding: 24px 0;">
+        First post coming soon.
+      </p>
+    )}
+
+    {posts.map((post) => (
+      <a href={`/blog/${post.id}/`} class="post-item">
+        <div class="post-meta">
+          {formatDate(post.data.date)}
+          {post.data.category && ` · ${post.data.category}`}
+        </div>
+        <div class="post-title">{post.data.title}</div>
+        {post.data.subtitle && (
+          <div class="post-subtitle">{post.data.subtitle}</div>
+        )}
+      </a>
+    ))}
+  </section>
+</BaseLayout>

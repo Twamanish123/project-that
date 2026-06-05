@@ -1,0 +1,9 @@
+{
+  "trailingSlash": "auto",
+  "navigationFallback": {
+    "rewrite": "/404.html"
+  },
+  "mimeTypes": {
+    ".xml": "application/xml"
+  }
+}

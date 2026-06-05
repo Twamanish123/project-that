@@ -1,0 +1,323 @@
+/* ───────── Design tokens ───────── */
+:root {
+  --bg: #FAF7F2;
+  --bg-elevated: #F4EFE7;
+  --ink: #1F1A14;
+  --ink-soft: #5A5048;
+  --ink-faint: #8A8076;
+  --accent: #A47148;
+  --accent-soft: #C99A6E;
+  --rule: #E8DFCF;
+  --content-width: 680px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14110E;
+    --bg-elevated: #1C1812;
+    --ink: #E8E2D5;
+    --ink-soft: #B5AC9D;
+    --ink-faint: #7A7165;
+    --accent: #D4A574;
+    --accent-soft: #B88858;
+    --rule: #2A241C;
+  }
+}
+
+/* ───────── Reset & base ───────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 400;
+  line-height: 1.65;
+  font-size: 19px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.container {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+/* ───────── Navigation ───────── */
+nav.site-nav {
+  padding: 32px 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+}
+
+nav.site-nav .brand {
+  font-family: 'Fraunces', serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+nav.site-nav .brand:hover { text-decoration: none; }
+
+nav.site-nav .brand-mark {
+  color: var(--accent);
+  margin-right: 6px;
+}
+
+nav.site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+nav.site-nav a {
+  color: var(--ink-soft);
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease;
+}
+
+nav.site-nav a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* ───────── Hero (homepage) ───────── */
+.hero {
+  padding: 80px 0 64px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.hero h1 {
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: var(--accent);
+  font-weight: 400;
+}
+
+.hero p {
+  font-size: 19px;
+  color: var(--ink-soft);
+  max-width: 560px;
+}
+
+/* ───────── Post list ───────── */
+.post-list { padding: 48px 0 80px; }
+
+.post-list-heading {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 32px;
+}
+
+.post-item {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--rule);
+  color: var(--ink);
+  display: block;
+  transition: padding-left 0.25s ease;
+}
+
+.post-item:hover {
+  padding-left: 8px;
+  text-decoration: none;
+}
+
+.post-item:hover .post-title { color: var(--accent); }
+
+.post-meta {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 8px;
+}
+
+.post-title {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.25;
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+  transition: color 0.2s ease;
+}
+
+.post-subtitle {
+  font-size: 16px;
+  color: var(--ink-soft);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* ───────── Article (single post) ───────── */
+article.post { padding: 56px 0 96px; }
+
+article.post .post-meta { margin-bottom: 16px; }
+
+article.post h1 {
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+article.post .subtitle {
+  font-size: 20px;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin-bottom: 56px;
+  line-height: 1.5;
+}
+
+article.post p {
+  margin-bottom: 24px;
+}
+
+article.post .post-body > p:first-of-type::first-letter {
+  font-family: 'Fraunces', serif;
+  font-size: 64px;
+  font-weight: 400;
+  float: left;
+  line-height: 0.95;
+  margin: 4px 12px 0 0;
+  color: var(--accent);
+}
+
+article.post blockquote {
+  border-left: 2px solid var(--accent);
+  padding: 4px 0 4px 24px;
+  margin: 32px 0;
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+article.post h2 {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 48px 0 16px;
+  letter-spacing: -0.01em;
+}
+
+article.post h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 32px 0 12px;
+}
+
+article.post ul, article.post ol {
+  margin: 0 0 24px 24px;
+}
+
+article.post li { margin-bottom: 8px; }
+
+article.post code {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  background: var(--bg-elevated);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+article.post pre {
+  background: var(--bg-elevated);
+  padding: 16px;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin-bottom: 24px;
+}
+
+article.post img {
+  max-width: 100%;
+  height: auto;
+  margin: 32px 0;
+  border-radius: 4px;
+}
+
+article.post hr {
+  border: none;
+  text-align: center;
+  margin: 56px 0;
+  color: var(--accent);
+  opacity: 0.6;
+}
+
+article.post hr::before {
+  content: '◦ ◦ ◦';
+  letter-spacing: 1em;
+  font-size: 14px;
+}
+
+/* ───────── Static pages (About, etc.) ───────── */
+.page-content {
+  padding: 56px 0 96px;
+}
+
+.page-content h1 {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 32px;
+}
+
+.page-content p {
+  margin-bottom: 24px;
+}
+
+/* ───────── Footer ───────── */
+footer.site-footer {
+  border-top: 1px solid var(--rule);
+  padding: 48px 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: var(--ink-faint);
+  text-align: center;
+}
+
+footer.site-footer .links a {
+  color: var(--ink-soft);
+  margin: 0 12px;
+}
+
+footer.site-footer .links a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+footer.site-footer .copyright {
+  margin-top: 16px;
+  color: var(--ink-faint);
+}
+
+/* ───────── Responsive ───────── */
+@media (max-width: 600px) {
+  body { font-size: 17px; }
+  .hero h1 { font-size: 30px; }
+  article.post h1 { font-size: 26px; }
+  article.post .subtitle { font-size: 18px; margin-bottom: 40px; }
+  nav.site-nav ul { gap: 16px; }
+  nav.site-nav { padding: 24px 0 16px; }
+}
