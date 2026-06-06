@@ -4,7 +4,7 @@ import { getCollection } from 'astro:content';
 export async function GET(context) {
   const posts = await getCollection('blog', ({ data }) => !data.draft);
   return rss({
-    title: 'Project-that',
+    title: 'Twam Asi',
     description: 'Slow writing on the ground of experience of Advaita Vedanta.',
     site: context.site,
     items: posts

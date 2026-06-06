@@ -6,7 +6,7 @@
 
 ## 1. Project Identity
 
-**Name:** Project-that (displayed brand name)
+**Name:** Twam Asi (displayed brand name)
 **Type:** Personal blog on Self-Realization
 **Author:** Infinity
 **Topics:** Ashtavakra Gita, Kashmir Shaivism, Advaita Vedanta, direct inquiry, lived experience
@@ -227,7 +227,7 @@ For context — these are settled, do not relitigate unless user explicitly asks
 - **Accent colour:** changed from amber to dusty blue in June 2026 — feels more still and contemplative.
 - **Images:** Unsplash sourced, desaturated via CSS filter (`grayscale(30-40%)`). Homepage: full-bleed mountain landscape. Per post: serene landscape in `heroImage` frontmatter.
 - **Layout:** full-bleed images (100vw), 1100px container for nav/lists, 680px reading width for article text.
-- **Brand name:** displayed as `Project-that` in nav (GitHub repo: `Twamanish123/project-that`).
+- **Brand name:** displayed as `Twam Asi` in nav (GitHub repo: `Twamanish123/project-that`).
 - **GitHub remote:** `https://github.com/Twamanish123/project-that.git` — uses fine-grained PAT for push.
 - **Azure Static Web Apps:** not yet connected. Pending setup — will auto-deploy on `git push` to `main` once configured.
 - **Domain:** `twamasi.in` — confirmed. Pending DNS setup to Azure Static Web Apps.
