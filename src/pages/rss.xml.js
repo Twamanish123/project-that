@@ -4,8 +4,8 @@ import { getCollection } from 'astro:content';
 export async function GET(context) {
   const posts = await getCollection('blog', ({ data }) => !data.draft);
   return rss({
-    title: 'I Am That',
-    description: 'Slow writing on Self-Realization.',
+    title: 'Project-that',
+    description: 'Slow writing on the ground of experience of Advaita Vedanta.',
     site: context.site,
     items: posts
       .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())

@@ -195,7 +195,7 @@ You:
    - Build output (success or errors)
 7. Ask: "Ready to commit and push?"
 8. On "yes": git add → commit → push
-9. Confirm: "Pushed. Deploy takes ~90s. Live at https://iamthat.in/blog/<slug>/"
+9. Confirm: "Pushed. Deploy takes ~90s. Live at https://twamasi.in/blog/<slug>/"
 ```
 
 If the user just wants a draft without publishing, stop after step 6 and don't push.
@@ -230,7 +230,7 @@ For context — these are settled, do not relitigate unless user explicitly asks
 - **Brand name:** displayed as `Project-that` in nav (GitHub repo: `Twamanish123/project-that`).
 - **GitHub remote:** `https://github.com/Twamanish123/project-that.git` — uses fine-grained PAT for push.
 - **Azure Static Web Apps:** not yet connected. Pending setup — will auto-deploy on `git push` to `main` once configured.
-- **Domain:** `iamthat` across various TLDs. Pending confirmation and DNS setup.
+- **Domain:** `twamasi.in` — confirmed. Pending DNS setup to Azure Static Web Apps.
 
 ---
 
