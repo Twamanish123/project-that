@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Subscribe" description="Follow Twam Asi via RSS.">
+  <div class="container">
+    <section class="page-content subscribe-page">
+
+      <h1>Subscribe</h1>
+
+      <p>
+        This blog has an RSS feed. RSS is a quiet way to follow writing — no algorithm, no notifications, no social media. When a new post arrives, it appears in your reader. That is all.
+      </p>
+
+      <p>
+        Copy the feed URL below and paste it into any RSS reader.
+      </p>
+
+      <div class="feed-box">
+        <span class="feed-url" id="feedUrl">https://twamasi.in/rss.xml</span>
+        <button class="copy-btn" onclick="copyFeed()">Copy</button>
+      </div>
+
+      <p class="copied-msg" id="copiedMsg">Copied.</p>
+
+      <div class="reader-list">
+        <p class="reader-heading">RSS readers worth trying</p>
+        <ul>
+          <li><a href="https://feedly.com" target="_blank" rel="noopener">Feedly</a> — browser and mobile, free tier available</li>
+          <li><a href="https://reederapp.com" target="_blank" rel="noopener">Reeder</a> — clean and minimal, Mac and iOS</li>
+          <li><a href="https://netnewswire.com" target="_blank" rel="noopener">NetNewsWire</a> — free, open source, Mac and iOS</li>
+        </ul>
+      </div>
+
+      <p class="or-return">
+        Or simply return here when you wish. The page will wait.
+      </p>
+
+    </section>
+  </div>
+</BaseLayout>
+
+<script>
+  function copyFeed() {
+    const url = document.getElementById('feedUrl').textContent;
+    navigator.clipboard.writeText(url).then(() => {
+      const msg = document.getElementById('copiedMsg');
+      msg.classList.add('visible');
+      setTimeout(() => msg.classList.remove('visible'), 2000);
+    });
+  }
+</script>

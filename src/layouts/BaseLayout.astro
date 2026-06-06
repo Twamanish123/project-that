@@ -7,7 +7,7 @@ interface Props {
 }
 
 const { title, description = "Slow writing on the ground of experience." } = Astro.props;
-const siteName = "I Am That";
+const siteName = "Twam Asi";
 const fullTitle = title === siteName ? title : `${title} — ${siteName}`;
 ---
 
@@ -20,6 +20,7 @@ const fullTitle = title === siteName ? title : `${title} — ${siteName}`;
   <meta name="description" content={description} />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="alternate" type="application/rss+xml" title={siteName} href="/rss.xml" />
+  <!-- RSS feed still available at /rss.xml for feed readers -->
 
   <!-- Open Graph -->
   <meta property="og:title" content={fullTitle} />
@@ -52,7 +53,7 @@ const fullTitle = title === siteName ? title : `${title} — ${siteName}`;
     <div class="container">
       <div class="links">
         <a href="/about">About</a>
-        <a href="/rss.xml">RSS</a>
+        <a href="/subscribe">Subscribe</a>
       </div>
       <div class="copyright">Written in stillness. © {new Date().getFullYear()}.</div>
     </div>
