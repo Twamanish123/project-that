@@ -4,7 +4,7 @@ subtitle: "Renunciation is not detaching from things. It is detaching from the c
 date: 2026-06-06
 category: "Inquiry"
 readTime: "3 min read"
-heroImage: "/images/vairagya.png"
+heroImage: "/images/Vairagya.png"
 draft: false
 ---
 
