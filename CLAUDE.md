@@ -6,7 +6,7 @@
 
 ## 1. Project Identity
 
-**Name:** I Am That
+**Name:** Project-that (displayed brand name)
 **Type:** Personal blog on Self-Realization
 **Author:** Infinity
 **Topics:** Ashtavakra Gita, Kashmir Shaivism, Advaita Vedanta, direct inquiry, lived experience
@@ -96,8 +96,9 @@ Every post is a file in `src/content/blog/`. Filename becomes the URL slug: `the
 title: "Post title in title case"
 subtitle: "One italicized line that appears below the title."
 date: 2026-06-04
-category: "Ashtavakra"     # see allowed list below
-readTime: "4 min read"     # estimate at ~200 wpm
+category: "Self-Inquiry"     # see allowed list below
+readTime: "4 min read"       # estimate at ~200 wpm
+heroImage: "https://images.unsplash.com/photo-<id>?w=1400&q=80&auto=format&fit=crop"
 draft: false
 ---
 ```
@@ -105,17 +106,28 @@ draft: false
 **Allowed categories (pick one, or propose a new one to the user):**
 - `Ashtavakra` — Ashtavakra Gita reflections
 - `Kashmir Shaivism` — Spanda, Pratyabhijna, Tattvas
-- `Inquiry` — direct self-inquiry, ātma-vichara
+- `Self-Inquiry` — direct self-inquiry, ātma-vichara, turning inward
+- `Inquiry` — open-ended philosophical inquiry
 - `Notes` — short observations, fragments
 - `Reading` — commentary on a specific passage
 
+**Structure rules (CRITICAL — every post must follow):**
+- Every post longer than ~300 words **must** have at least 2–3 `## H2` subheadings
+- Subheadings should be quiet and contemplative — not chapter titles, not academic labels
+- Good examples: `## The Triad`, `## Turning Inward`, `## The Only Complete Inquiry`
+- Bad examples: `## Introduction`, `## Main Argument`, `## Conclusion`
+- Use `---` to mark a major tonal or directional shift in the piece (renders as `◦ ◦ ◦`)
+- Subheadings can appear before or after the `---` divider — both are fine
+- For short `Notes` posts (under ~300 words), subheadings are optional
+
 **Markdown conventions inside the body:**
 - `## H2` for section breaks, `### H3` sparingly
-- `>` for blockquotes (renders with amber accent bar)
+- `>` for blockquotes (renders with dusty blue accent bar)
 - `---` between major sections (renders as centered ornament `◦ ◦ ◦`)
 - Drop cap auto-applies to the first paragraph — do not add any custom formatting to it
 - Avoid bold and italic inside body prose unless emphasis genuinely matters
 - No emojis. No images unless the user provides one explicitly.
+- For `heroImage`: search Unsplash for muted, serene, landscape images. Prefer fog, mountains, still water, overcast skies. Avoid saturated colours, people, obvious stock imagery.
 
 ---
 
@@ -129,11 +141,12 @@ All visual design lives in `src/styles/global.css`. Token reference:
 | `--ink` | `#1F1A14` | `#E8E2D5` | Body text |
 | `--ink-soft` | `#5A5048` | `#B5AC9D` | Secondary text |
 | `--ink-faint` | `#8A8076` | `#7A7165` | Meta/labels |
-| `--accent` | `#A47148` | `#D4A574` | Links, ornaments |
+| `--accent` | `#6B8FAB` | `#8FB3CF` | Links, ornaments (dusty blue) |
 | `--rule` | `#E8DFCF` | `#2A241C` | Dividers |
 
 **Typography:** Fraunces (body, headings), Inter (meta/nav). Both from Google Fonts.
-**Content width:** 680px max.
+**Container width:** 1100px (nav, post list, general layout).
+**Reading width:** 680px (article body text, hero text, About page).
 **Dark mode:** Auto via `prefers-color-scheme`. Do not add a toggle without asking.
 
 **If the user asks for a design change:** modify tokens in `:root` first. Only touch component styles if tokens can't achieve it.
@@ -210,8 +223,14 @@ For context — these are settled, do not relitigate unless user explicitly asks
 - **Considered Ghost on Azure VM:** rejected as overkill — paid VM time, server maintenance for a static-content blog.
 - **Considered Azure Blob static website:** rejected — custom domain HTTPS requires Azure Front Door (~₹3,000/mo).
 - **Chose Astro + Azure Static Web Apps:** free, custom domain with free SSL, markdown-first matches user's Obsidian workflow, full design control.
-- **Design direction:** warm cream + ink + restrained amber accent, Fraunces serif, reading-first single column. Inspired by the user's existing aesthetic (warm darkness, amber). Explicitly **not** stock spiritual imagery, lotuses, sunsets, sci-fi UI, or HUD elements.
-- **Domain:** `iamthat` across various TLDs. User checking availability inside WP.com admin or via registrar.
+- **Design direction:** warm cream + ink + dusty blue accent (`#6B8FAB`), Fraunces serif, reading-first layout. Explicitly **not** stock spiritual imagery, lotuses, sunsets, sci-fi UI, or HUD elements.
+- **Accent colour:** changed from amber to dusty blue in June 2026 — feels more still and contemplative.
+- **Images:** Unsplash sourced, desaturated via CSS filter (`grayscale(30-40%)`). Homepage: full-bleed mountain landscape. Per post: serene landscape in `heroImage` frontmatter.
+- **Layout:** full-bleed images (100vw), 1100px container for nav/lists, 680px reading width for article text.
+- **Brand name:** displayed as `Project-that` in nav (GitHub repo: `Twamanish123/project-that`).
+- **GitHub remote:** `https://github.com/Twamanish123/project-that.git` — uses fine-grained PAT for push.
+- **Azure Static Web Apps:** not yet connected. Pending setup — will auto-deploy on `git push` to `main` once configured.
+- **Domain:** `iamthat` across various TLDs. Pending confirmation and DNS setup.
 
 ---
 
@@ -241,4 +260,4 @@ Do not pre-emptively start work, suggest features, or comment on existing posts 
 
 ---
 
-*Last updated: founding conversation, June 2026. Update this file when material decisions change.*
+*Last updated: June 2026 — visual overhaul session. Update this file when material decisions change.*
