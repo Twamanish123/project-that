@@ -4,7 +4,7 @@ subtitle: "Every object yields infinite information. Only one inquiry comes to a
 date: 2026-06-06
 category: "Self-Inquiry"
 readTime: "4 min read"
-heroImage: "https://images.unsplash.com/photo-wVjd0eWNqI8?w=1400&q=80&auto=format&fit=crop"
+heroImage: "/images/knowledge-and-liberation.png"
 draft: false
 ---
 
