@@ -2,7 +2,7 @@
 title: "On Vairagya"
 subtitle: "Renunciation is not detaching from things. It is detaching from the categories that name them."
 date: 2026-06-06
-category: "Inquiry"
+category: "Self-Inquiry"
 readTime: "3 min read"
 heroImage: "/images/Vairagya.png"
 draft: false
