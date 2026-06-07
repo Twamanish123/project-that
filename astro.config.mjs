@@ -3,7 +3,7 @@ import sitemap from '@astrojs/sitemap';
 
 // Update this to your custom domain once you have it
 export default defineConfig({
-  site: 'https://twamasi.in',
+  site: 'https://www.twamasi.in',
   integrations: [sitemap()],
   markdown: {
     shikiConfig: {
