@@ -250,6 +250,16 @@ nav.site-nav a:hover {
   line-height: 1.55;
 }
 
+/* ───────── Poem / litany styling ───────── */
+article.post .post-body p + p {
+  margin-top: 0;
+}
+
+article.post .post-body br {
+  display: block;
+  content: "";
+}
+
 /* ───────── Back link ───────── */
 .back-link {
   display: inline-block;
