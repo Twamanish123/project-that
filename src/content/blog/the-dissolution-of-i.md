@@ -2,7 +2,7 @@
 title: "The Dissolution of I"
 subtitle: "On the day the pursuit stopped, and what remained."
 date: 2026-06-15
-category: "Inquiry"
+category: "Self-Inquiry"
 readTime: "3 min read"
 heroImage: "/images/the-dissolution-of-I.png"
 draft: false
