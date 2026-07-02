@@ -2,9 +2,9 @@
 title: "How Liberation Is Achieved"
 subtitle: "On the three instructions: the poison of stimulation, the body that is not the Self, and the witness that does nothing."
 date: 2026-06-15
-category: "Ashtavakra"
+category: "Teachers"
 readTime: "3 min read"
-heroImage: "/images/janaka-n-asgtavakra.png"
+heroImage: "/images/janaka-n-ashtavakra.png"
 draft: false
 ---
 
