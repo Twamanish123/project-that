@@ -16,7 +16,7 @@ I never met him. By the time I came to know of him, he was no longer present in 
 
 ## A Scientist Who Investigated
 
-He was a nuclear scientist at TIFR in Mumbai in his early years. Later he moved back to Visakhapatnam, where he dedicated his life to building a temple to Lalita in the form of Sri Meru, so that others could share in the experience he had.
+He was a nuclear scientist at TIFR in Mumbai in his early years. Later he moved near to Annakapalli, where he dedicated his life to building a temple to Lalita in the form of Sri Meru, so that others could share in the experience he had.
 
 He was a person who held information in contempt of court before accepting it as a way. But that day, when the experience came, he could not hold it in contempt any longer. He surrendered to the whole. And because he believed in sharing love, he spent the rest of his days teaching others the ways of Sri Vidya.
 
