@@ -1,6 +1,6 @@
 ---
 title: "Salutations to Guru Amrutananda Saraswati"
-subtitle: "On the Guru I never met, and the day fission and fusion revealed themselves as the Mother."
+subtitle: "the day fission and fusion revealed themselves as the Mother."
 date: 2026-06-15
 category: "Teachers"
 readTime: "3 min read"
